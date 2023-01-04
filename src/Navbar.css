@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.log {
+  font-size: 30px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  text-align: left;
+  align-items: center;
+  height: 15vh;
+  background-color: #00828c;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  width: 75%;
+}
+
+.home,
+.about {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.mobile-menu-icon {
+  display: none;
+}
+
+@media screen and (max-width: 700px) {
+  .log {
+    display: flex;
+    position: absolute;
+    top: 15px;
+    left: 35px;
+  }
+
+  .navbar {
+    height: 20vh;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .nav-links-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    background-color: black;
+    left: 0;
+    top: 75px;
+    z-index: 9;
+    transition: all 0.5s ease-out;
+    width: 100%;
+  }
+
+  .home,
+  .about {
+    color: white;
+    text-align: center;
+    padding: 32px;
+    width: 100%;
+    transition: all 0.5s ease;
+  }
+
+  .mobile-menu-icon {
+    z-index: 99 !important;
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    color: white;
+    background-color: cornflowerblue;
+    border: none;
+    outline: none;
+    top: 15px;
+    right: 25px;
+  }
+}
+
+@media screen and(max-width:500px) {
+  .appname {
+    font-size: 10px;
+  }
+}
